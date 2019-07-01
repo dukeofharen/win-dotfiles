@@ -1,8 +1,5 @@
 # Install VSCode settings
-$vscodeSettingsFolder = "$($env:USERPROFILE)\AppData\Roaming\Code\User"
-$vscodeFolder = "$PSScriptRoot\VSCode"
-Write-Host "Moving files from $vscodeFolder to $vscodeSettingsFolder"
-Copy-Item -Path "$vscodeFolder\*" -Destination $vscodeSettingsFolder -Force
+. "$PSScriptRoot\VSCode\VSCode-Init.ps1"
 
 # Show profile installation message to user
 Write-Host -ForegroundColor Green "To have access to all the PowerShell functions, add the following line to your PowerShell profile script ($profile)"
